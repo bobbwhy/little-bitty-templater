@@ -23,7 +23,7 @@ function test(isLib) {
   );
 
   describe(
-    'testing the LittleBittyTemplater!',
+    'testing the LittleBittyTemplater ' + (isLib === true ? 'lib' : 'src') + ' version!',
     function() { 
       it('should be able to create a templater.',
         function() { 

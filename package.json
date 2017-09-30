@@ -4,6 +4,7 @@
   "description": "a very basic .js templating engine.. no loops or logic.. just tags. also es5  ",
   "main": "index.js",
   "scripts": {
+    "build": "node scripts/build",
     "test": "pwd && NODE_PATH=$(pwd) mocha ./test/index.js | ./node_modules/.bin/bunyan"
   },
   "keywords": [
@@ -12,10 +13,11 @@
   ],
   "author": "Robert LaMarca <robertlamarca@gmail.com>",
   "license": "GPL-2.0",
-  "dependencies": {
+  "devDependencies": {
     "bunyan": "^1.8.12",
     "chai": "^4.1.2",
     "mocha": "^3.5.3",
+    "node-minify": "^2.3.1",
     "rimraf": "^2.6.2"
   }
 }
