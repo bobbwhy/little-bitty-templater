@@ -1,0 +1,12 @@
+node_modules
+lib
+public/js/*
+.DS_Store
+arch
+*.old.*
+*.perplex*
+*.tgz
+*.bak.*
+notion/
+notion
+comments

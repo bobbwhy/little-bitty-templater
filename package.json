@@ -1,0 +1,21 @@
+{
+  "name": "little-bitty-templater",
+  "version": "0.0.1",
+  "description": "a very basic .js templating engine.. no loops or logic.. just tags. also es5  ",
+  "main": "index.js",
+  "scripts": {
+    "test": "pwd && NODE_PATH=$(pwd) mocha ./test/index.js | ./node_modules/.bin/bunyan"
+  },
+  "keywords": [
+    "Template",
+    "engine"
+  ],
+  "author": "Robert LaMarca <robertlamarca@gmail.com>",
+  "license": "GPL-2.0",
+  "dependencies": {
+    "bunyan": "^1.8.12",
+    "chai": "^4.1.2",
+    "mocha": "^3.5.3",
+    "rimraf": "^2.6.2"
+  }
+}
