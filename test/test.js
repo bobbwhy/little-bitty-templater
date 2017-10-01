@@ -18,6 +18,7 @@ function test(isLib) {
     function() { 
       testTemplateText = String(fs.readFileSync('./test/test-template-text.html'));
       expectedResultText = String(fs.readFileSync('./test/expected-result-text.html'));
+      expectedResultTextAuthor = String(fs.readFileSync('./test/expected-result-text-author.html'));
       templater = new LittleBittyTemplater('testTemplater', testTemplateText);
     }
   );
@@ -25,7 +26,7 @@ function test(isLib) {
   describe(
     'testing the LittleBittyTemplater ' + (isLib === true ? 'lib' : 'src') + ' version!',
     function() { 
-      it('should be able to create a templater.',
+      it('should be able to create a templater',
         function() { 
           templater = new LittleBittyTemplater('test', testTemplateText);
           expect(templater.name).to.equal('test');
@@ -33,10 +34,17 @@ function test(isLib) {
         }
       );
 
-      it('should be able to render some text.',
+      it('should be able to render some text using the context without an author field.',
         function() { 
-          var rendered = templater.render(data.context);
-          expect(rendered).to.equal(expectedResultText);
+          var renderedText = templater.render(data.context);
+          expect(renderedText).to.equal(expectedResultText);
+        }
+      );
+
+      it('should be able to render some text using the context with an author field',
+        function() { 
+          var renderedText = templater.render(data.contextWithAuthor);
+          expect(renderedText).to.equal(expectedResultTextAuthor);
         }
       );
     }
