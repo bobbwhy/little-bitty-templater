@@ -1,11 +1,12 @@
 {
   "name": "little-bitty-templater",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "a very basic .js templating engine.. no loops or logic.. just tags. also es5  ",
   "main": "index.js",
   "scripts": {
     "build": "node scripts/build",
-    "test": "pwd && NODE_PATH=$(pwd) mocha ./test/index.js | ./node_modules/.bin/bunyan"
+    "test": "pwd && NODE_PATH=$(pwd) mocha ./test/index.js | ./node_modules/.bin/bunyan".
+    "prepublish": "npm run build"
   },
   "keywords": [
     "Template",
