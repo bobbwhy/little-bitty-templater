@@ -38,9 +38,15 @@ LittleBittyTemplater.prototype.render = function(context) {
     var textArray = [];
     var i = 0;
     var _l = processedTemplate.length;
+    var v;
     for ( ; i < _l; i+=2 ) {
       textArray[i] = processedTemplate[i];
-      textArray[i+1] = String(context[processedTemplate[i+1]]||'');
+      v = context[processedTemplate[i+1]];
+      if (typeof v === 'undefined' || v === null) { 
+        textArray[i+1] = '';
+      } else { 
+        textArray[i+1] = String(context[processedTemplate[i+1]]);
+      }
     }
     return textArray.join('');
 }
