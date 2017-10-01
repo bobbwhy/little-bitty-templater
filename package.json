@@ -1,6 +1,6 @@
 {
   "name": "little-bitty-templater",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "a very basic .js templating engine.. no loops or logic.. just tags. also es5  ",
   "main": "index.js",
   "scripts": {
