@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "node scripts/build",
-    "test": "pwd && NODE_PATH=$(pwd) mocha ./test/index.js | ./node_modules/.bin/bunyan".
+    "test": "pwd && NODE_PATH=$(pwd) mocha ./test/index.js | ./node_modules/.bin/bunyan",
     "prepublish": "npm run build"
   },
   "keywords": [
